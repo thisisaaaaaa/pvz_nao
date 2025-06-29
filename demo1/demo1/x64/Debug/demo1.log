@@ -1,8 +1,3 @@
-﻿  JiangShi.cpp
-C:\Users\ALIENWARE\Desktop\demo1\JiangShi.cpp(56,35): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
-C:\Users\ALIENWARE\Desktop\demo1\JiangShi.cpp(56,23): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
-  tools.cpp
-C:\Users\ALIENWARE\Desktop\demo1\tools.cpp(90,11): warning C4244: “初始化”: 从“unsigned __int64”转换到“int”，可能丢失数据
-  main.cpp
-  正在生成代码...
-  demo1.vcxproj -> C:\Users\ALIENWARE\Desktop\demo1\x64\Debug\demo1.exe
+﻿  main.cpp
+C:\Users\11625\Desktop\demo1\main.cpp(40,29): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+  demo1.vcxproj -> C:\Users\11625\Desktop\demo1\x64\Debug\demo1.exe

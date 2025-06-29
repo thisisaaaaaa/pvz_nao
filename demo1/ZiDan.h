@@ -9,7 +9,7 @@ class ZiDan {
      //构造函数
         ZiDan(Type type, int row, int damage,);
     //析构函数
-        virtual void ~ZiDan() = default;
+        virtual ~ZiDan() = default;
 
         virtual void move(int speed); //移动
 };

@@ -35,7 +35,7 @@ void JiangShi::init_jiangshi()
 
 void JiangShi::move()
 {
-	position.x -= speed; // 每秒移动像素
+	position.x -= double(speed)/10; // 每秒移动像素
 
 	//如果撞到植物则停止(未完成)
 

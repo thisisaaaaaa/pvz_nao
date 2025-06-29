@@ -1,12 +1,21 @@
 //声明一个植物类
-#include"JiangShi.h"
+#pragma once
+#include "Jiangshi.h"
+#include "PlayScene.h"
+#include "tools.h"
+#include <vector>
+#include <iostream>
+#include <ctime>
+#include <cstdlib>
+#include <string>
 class ZhiWu {
 	public:
 		enum class Type{sunflower ,peashooter};
 		enum class State { dying, attacking,};
-
+		int timer = 0;
 		Type type;
 		State state;
+		int idx;
 		int row;
 		int col;
 
@@ -22,6 +31,6 @@ class ZhiWu {
 		// 获取位置
 		int getrow() const { return row; };
 		int getcol() const { return col; };
-
+		void drawplant(std::vector<ZhiWu*> plant);
 
 };

@@ -10,7 +10,6 @@ class grass_grid
 {
 private:
 	int status;     //格子的状态，默认没有植物的时候为零，有植物的时候为1；
-	
 	//格子在窗口的坐标和宽高
 	int x;         
 	int y;
@@ -22,6 +21,7 @@ private:
 	int index_y;
 
 public:
+	int which_plant = NULL;
 	//无参构造
 	grass_grid()
 	{
@@ -87,6 +87,17 @@ public:
 	{
 		status = num;
 	}
+
+	//获取状态
+	int get_status() {
+ 		return status;
+	}
+
+	//获取上方植物索引
+	int get_which() {
+		return which_plant;
+	}
+
 };
 
 
