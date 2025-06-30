@@ -2,33 +2,41 @@
 #include<graphics.h>
 
 
-/*Ê¹ÓÃËµÃ÷
-  ÔÚÓµÓĞÖ÷º¯ÊıµÄÎÄ¼şÖĞÏÈ¶¨ÒåÒ»¸öÈ«¾Ö±äÁ¿£¬Í³Ò»Ãû³Æ¾Í½Ğ ***RESALL***£¬¾ßÌåĞÎÊ½Îª MyRes RESALL
-  ÔÚÆäËûÎÄ¼şÖĞÈç¹ûĞèÒªÓÃµ½×ÊÔ´µÄ»°£¬ÄÇÃ´ĞèÒª°üº¬Í·ÎÄ¼şinclude"res.h"£¬²¢ÉùÃ÷ÓĞÒ»¸öÍâ²¿±äÁ¿extern MyRes RESALL
+/*ä½¿ç”¨è¯´æ˜
+  åœ¨æ‹¥æœ‰ä¸»å‡½æ•°çš„æ–‡ä»¶ä¸­å…ˆå®šä¹‰ä¸€ä¸ªå…¨å±€å˜é‡ï¼Œç»Ÿä¸€åç§°å°±å« ***RESALL***ï¼Œå…·ä½“å½¢å¼ä¸º MyRes RESALL
+  åœ¨å…¶ä»–æ–‡ä»¶ä¸­å¦‚æœéœ€è¦ç”¨åˆ°èµ„æºçš„è¯ï¼Œé‚£ä¹ˆéœ€è¦åŒ…å«å¤´æ–‡ä»¶include"res.h"ï¼Œå¹¶å£°æ˜æœ‰ä¸€ä¸ªå¤–éƒ¨å˜é‡extern MyRes RESALL
 */
 class MyRes
 {
 public:
-	IMAGE menuBG;                     //¿ªÊ¼²Ëµ¥µÄ±³¾°Í¼Æ¬
-	IMAGE selectButton1;              //¿ªÊ¼²Ëµ¥µÄ¿ªÊ¼°´Å¥
-	IMAGE selectButton2;              //¿ªÊ¼²Ëµ¥µÄ¿ªÊ¼°´Å¥
-	IMAGE selectButton3;              //¿ªÊ¼²Ëµ¥µÄ¿ªÊ¼°´Å¥
-	IMAGE playBG;                     //ÓÎÍæ³¡¾°µÄ±³¾°
-	IMAGE plantingBar;                 //³¡¾°ÉÏÃæµÄÖ²ÎïÖÖÖ²À¸
-	IMAGE test;//ÊÔÑé
-
+	IMAGE menuBG;                     //å¼€å§‹èœå•çš„èƒŒæ™¯å›¾ç‰‡
+	IMAGE selectButton1;              //å¼€å§‹èœå•çš„å¼€å§‹æŒ‰é’®é»˜è®¤çŠ¶æ€
+	IMAGE selectButton2;              //å¼€å§‹èœå•çš„å¼€å§‹æŒ‰é’®é»˜è®¤çŠ¶æ€
+	IMAGE playBG;                     //æ¸¸ç©åœºæ™¯çš„èƒŒæ™¯
+	IMAGE plantingBar;                 //åœºæ™¯ä¸Šé¢çš„æ¤ç‰©ç§æ¤æ 
+	IMAGE card_pea;                   //è±Œè±†å¡ç‰‡
+	IMAGE card_sunflower;             //å‘æ—¥è‘µå¡ç‰‡
+	IMAGE card_wallnut;               //åšæœå¡ç‰‡  
+	IMAGE startSet;                    //å¼€å§‹çš„æ—¶å€™çš„æ–‡å­—å›¾ç‰‡Set
+	IMAGE startReady;                 //å¼€å§‹çš„æ—¶å€™çš„æ–‡å­—å›¾ç‰‡Ready
+	IMAGE startPlant;                  //å¼€å§‹çš„æ—¶å€™çš„æ–‡å­—å›¾ç‰‡Set
+	
 	void load()
 	{
-		loadimage(&menuBG, "res/Selector_BG.jpg");
+		loadimage(&menuBG, "res/menu.png");
 		loadimage(&playBG, "res/background1.jpg");
-		loadimage(&selectButton1, "res/SelectorScreen_Shadow_StartAdventure.jpg");
-		loadimage(&selectButton2, "res/SelectorScreen_StartAdventure_Button1.jpg");
-		loadimage(&selectButton3, "res/SelectorScreen_StartAdventure_Highlight.jpg");
+		loadimage(&selectButton1, "res/menu1.png");
+		loadimage(&selectButton2, "res/menu2.png");
 		loadimage(&plantingBar, "res/bar.jpg");
-		loadimage(&test, "res/card_pea.png");
+		loadimage(&card_pea, "res/card_pea.png");
+		loadimage(&card_sunflower, "res/card_sunflower.png");
+		loadimage(&card_wallnut, "res/card_wallnut.png");
+		loadimage(&startSet, "res/StartSet.png");
+		loadimage(&startReady, "res/StartReady.png");
+		loadimage(&startPlant, "res/StartPlant.png");
+		
 	}
 };
-
 
 
 
