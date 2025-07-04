@@ -8,23 +8,41 @@
 #include <ctime>
 #include <cstdlib>
 #include <string>
+#include "object.h"
 
 const int MAX_NUM = 50;
-class JiangShi {
-	public:
-		//僵尸的属性
-		enum class Type
-		{
-			normal,
-			luzhang
-		}; 
-		//僵尸的状态
-		enum class State
-		{
-			walking,
-			attacking,
-			dying
-		}; 
+class JiangShi:public object {
+public:
+	//僵尸的属性
+	enum class Type
+	{
+		normal,
+		luzhang
+	};
+	//僵尸的状态
+	enum class State
+	{
+		walking,
+		attacking,
+		dying
+	};
+	Type type;                   //类型
+	State state;                 //状态
+	double spawn_time = 10;      //生成时间
+	int row;                     //所在行
+	int health;                  //血量
+	int height = 60;             //高度
+	int width = 40;              //宽度
+	struct position				 //位置
+	{
+		double x;
+		double y;
+	} position;
+	int cnt = 0;
+	int speed;                   //速度
+	int damage;                  //攻击力
+	IMAGE attack[MAX_NUM];       //僵尸攻击图片数组
+	IMAGE die[MAX_NUM];          //僵尸死亡图片数组
 
 	//构造函数
 
@@ -38,10 +56,10 @@ class JiangShi {
 	virtual void init_jiangshi();
 
 	//僵尸移动
-	virtual void move(); 
+	virtual void move(JiangShi *temp_dier); 
 
 	//僵尸绘制
-	virtual void draw(int delta,int change_time);
+	virtual void draw(std::vector<JiangShi*> dier,int delta,int change_time);
 
 	//受到伤害
 	//virtual void take_damage(int degree); 
@@ -54,24 +72,5 @@ class JiangShi {
 
 	//获取位置
 	virtual std::vector<double> get_position();
-
-
-	private:
-		Type type;                   //类型
-		State state;                 //状态
-		double spawn_time = 10;      //生成时间
-		int row;                     //所在行
-		int health;                  //血量
-		int height = 60;             //高度
-		int width = 40;              //宽度
-		struct position				 //位置
-		{
-			double x;
-			double y;
-		} position;                 	
-		int speed;                   //速度
-		int damage;                  //攻击力
-		IMAGE walk[MAX_NUM];         //僵尸图片数组
-		IMAGE attack[MAX_NUM];       //僵尸攻击图片数组
-		IMAGE die[MAX_NUM];          //僵尸死亡图片数组
+	void creat_dier(JiangShi* temp_dier,int row_rand);
 };

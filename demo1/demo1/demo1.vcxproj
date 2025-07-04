@@ -123,7 +123,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\Button.cpp" />
     <ClCompile Include="..\JiangShi.cpp" />
+    <ClCompile Include="..\movingScene.cpp" />
     <ClCompile Include="..\PlayScene.cpp" />
     <ClCompile Include="..\tools.cpp" />
     <ClCompile Include="..\ZhiWu.cpp" />
@@ -137,6 +139,8 @@
     <ClInclude Include="..\tools.h" />
     <ClInclude Include="..\ZhiWu.h" />
     <ClInclude Include="..\ZiDan.h" />
+    <ClInclude Include="Button.h" />
+    <ClInclude Include="movingScene.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

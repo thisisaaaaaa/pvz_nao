@@ -8,16 +8,17 @@
 #include <ctime>
 #include <cstdlib>
 #include <string>
-class ZhiWu {
+#include "object.h"
+class ZhiWu :public object{
 	public:
 		enum class Type{sunflower ,peashooter};
 		enum class State { dying, attacking,};
-		int timer = 0;
 		Type type;
 		State state;
 		int idx;
 		int row;
 		int col;
+		int cnt = 0;
 
 	//构造函数
 		//ZhiWu(Type type, int row , int col );
@@ -31,6 +32,6 @@ class ZhiWu {
 		// 获取位置
 		int getrow() const { return row; };
 		int getcol() const { return col; };
-		void drawplant(std::vector<ZhiWu*> plant);
-
+		void drawplant(std::vector<ZhiWu*> plant, int interval, int delta);
+		void init_zhiwu(LPCTSTR path, int num);
 };

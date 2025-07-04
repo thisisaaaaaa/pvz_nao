@@ -1,3 +1,4 @@
-﻿  main.cpp
-C:\Users\11625\Desktop\demo1\main.cpp(40,29): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+﻿  JiangShi.cpp
+C:\Users\11625\Desktop\demo1\JiangShi.cpp(68,54): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+C:\Users\11625\Desktop\demo1\JiangShi.cpp(68,33): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
   demo1.vcxproj -> C:\Users\11625\Desktop\demo1\x64\Debug\demo1.exe
